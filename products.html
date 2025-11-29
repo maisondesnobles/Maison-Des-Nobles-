@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>المنتجات Maison Des Nobles Fragrances</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><h1>Maison Des Nobles Fragrances</h1></div>
+      <nav class="lang-switch">
+        <a href="index.html" class="back">العودة</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container products-page">
+    <h2>منتجاتنا</h2>
+
+    <div class="products-grid">
+      <article class="product">
+        <img src="images/stronger.jpeg" alt="Stronger With You Intensely" />
+        <h3>Stronger With You Intensely</h3>
+        <p class="price">السعر: 299 درهم</p>
+        <p class="desc-ar">عطر دافئ ومكثف بنفحات الفانيلا والكراميل للرجال.</p>
+        <p class="desc-fr" style="display:none">Parfum chaud et intense aux notes de vanille et caramel.</p>
+        <p class="desc-en" style="display:none">Warm and intense fragrance with vanilla and caramel notes.</p>
+        <a class="btn order" href="https://wa.me/212768997900" target="_blank">اطلب الآن عبر واتساب</a>
+      </article>
+
+      <article class="product">
+        <img src="images/valentino.jpeg" alt="Valentino Uomo Intense" />
+        <h3>Valentino Uomo Intense</h3>
+        <p class="price">السعر: 280 درهم</p>
+        <p class="desc-ar">عطر رجالي أنيق بقاعدة خشبية وغنية بالتوابل.</p>
+        <p class="desc-fr" style="display:none">Parfum masculin élégant avec une base boisée et épicée.</p>
+        <p class="desc-en" style="display:none">Elegant masculine scent with a rich woody and spicy base.</p>
+        <a class="btn order" href="https://wa.me/212768997900" target="_blank">اطلب الآن عبر واتساب</a>
+      </article>
+
+      <article class="product">
+        <img src="images/myway.jpeg" alt="My Way Giorgio Armani" />
+        <h3>My Way Giorgio Armani</h3>
+        <p class="price">السعر: 280 درهم</p>
+        <p class="desc-ar">عطر نسائي زهري أنيق يعبر عن الأنوثة والجرأة.</p>
+        <p class="desc-fr" style="display:none">Parfum floral élégant exprimant féminité et audace.</p>
+        <p class="desc-en" style="display:none">Elegant floral perfume expressing femininity and boldness.</p>
+        <a class="btn order" href="https://wa.me/212768997900" target="_blank">اطلب الآن عبر واتساب</a>
+      </article>
+
+      <article class="product">
+        <img src="images/le_male.jpeg" alt="Jean Paul Gaultier Le Male Elixir" />
+        <h3>Jean Paul Gaultier Le Male Elixir</h3>
+        <p class="price">السعر: 280 درهم</p>
+        <p class="desc-ar">نسخة مكثفة من الكلاسيكية بنفحات عطرية غنية.</p>
+        <p class="desc-fr" style="display:none">Version intense du classique avec des notes riches.</p>
+        <p class="desc-en" style="display:none">An intense take on the classic with rich aromatic notes.</p>
+        <a class="btn order" href="https://wa.me/212768997900" target="_blank">اطلب الآن عبر واتساب</a>
+      </article>
+
+      <article class="product">
+        <img src="images/burberry.jpeg" alt="Burberry Her Eau de Parfum Intense" />
+        <h3>Burberry Her Eau de Parfum Intense</h3>
+        <p class="price">السعر: 280 درهم</p>
+        <p class="desc-ar">عطر نسائي فاكهي وزهري بلمسة عصرية أنثوية.</p>
+        <p class="desc-fr" style="display:none">Parfum fruité et floral avec une touche moderne.</p>
+        <p class="desc-en" style="display:none">Fruity floral perfume with a modern feminine touch.</p>
+        <a class="btn order" href="https://wa.me/212768997900" target="_blank">اطلب الآن عبر واتساب</a>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Maison Des Nobles Fragrances</p>
+    </div>
+  </footer>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.desc-ar').forEach(e => e.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('.desc-fr').forEach(e => e.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('.desc-en').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
+    }
+    showLang('ar');
+  </script>
+</body>
+</html>

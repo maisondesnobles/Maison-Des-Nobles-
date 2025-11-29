@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تواصل معنا - Maison Des Nobles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><h1>Maison Des Nobles Fragrances</h1></div>
+      <nav class="lang-switch">
+        <a href="index.html" class="back">العودة</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h2>تواصل معنا</h2>
+
+    <div class="contact-info">
+      <p class="desc-ar">
+        يمكنك التواصل معنا مباشرة عبر واتساب أو متابعتنا على وسائل التواصل الاجتماعي.
+      </p>
+      <p class="desc-fr" style="display:none">
+        Contactez-nous directement via WhatsApp ou suivez-nous sur les réseaux sociaux.
+      </p>
+      <p class="desc-en" style="display:none">
+        Contact us directly via WhatsApp or follow us on social media.
+      </p>
+
+      <ul class="contact-links">
+        <li><a href="https://wa.me/212768997900" target="_blank">📱 واتساب / WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/maisondesnobles1" target="_blank">📸 Instagram</a></li>
+        <li><a href="https://www.facebook.com/share/17nBSpJ2C8" target="_blank">📘 Facebook</a></li>
+        <li><a href="https://www.tiktok.com/@maison.des_nobles" target="_blank">🎵 TikTok</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Maison Des Nobles Fragrances</p>
+    </div>
+  </footer>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.desc-ar').forEach(e => e.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('.desc-fr').forEach(e => e.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('.desc-en').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
+    }
+    showLang('ar');
+  </script>
+</body>
+</html>
