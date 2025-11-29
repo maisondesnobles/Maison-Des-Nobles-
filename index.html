@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maison Des Nobles Fragrances</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-image: url('images/nobles-bg.JPEG');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      height: 60px;
+      vertical-align: middle;
+    }
+    .site-header,
+    .hero,
+    .site-footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.PNG" alt="Maison Des Nobles Logo" class="logo-img" />
+        <h1>Maison Des Nobles Fragrances</h1>
+      </div>
+      <nav class="lang-switch">
+        <button data-lang="ar" class="active">العربية</button>
+        <button data-lang="fr">Français</button>
+        <button data-lang="en">English</button>
+        <a href="company.html" class="company-link" data-link-ar>عن الشركة</a>
+        <a href="company.html" class="company-link" data-link-fr style="display:none">À propos</a>
+        <a href="company.html" class="company-link" data-link-en style="display:none">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero">
+      <h2 data-text-ar>مرحبا بكم في عالم النبلاء</h2>
+      <h2 data-text-fr style="display:none">Bienvenue dans le monde des nobles</h2>
+      <h2 data-text-en style="display:none">Welcome to the world of nobles</h2>
+      <p data-desc-ar>عطور أصلية وفاخرة مختارة بعناية لتكمل شخصيتك.</p>
+      <p data-desc-fr style="display:none">Parfums originaux et luxueux sélectionnés avec soin.</p>
+      <p data-desc-en style="display:none">Original luxury perfumes carefully selected for you.</p>
+      <div class="hero-actions">
+        <a class="btn" href="products.html" id="to-products">المنتجات</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Maison Des Nobles Fragrances</p>
+    </div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-switch button');
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-text-ar]').forEach(el => el.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-text-fr]').forEach(el => el.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-text-en]').forEach(el => el.style.display = (lang==='en') ? '' : 'none');
+      document.querySelectorAll('[data-desc-ar]').forEach(el => el.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-desc-fr]').forEach(el => el.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-desc-en]').forEach(el => el.style.display = (lang==='en') ? '' : 'none');
+      document.querySelectorAll('[data-link-ar]').forEach(el => el.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-link-fr]').forEach(el => el.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-link-en]').forEach(el => el.style.display = (lang==='en') ? '' : 'none');
+      buttons.forEach(b => b.classList.remove('active'));
+      document.querySelector('.lang-switch button[data-lang="'+lang+'"]').classList.add('active');
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    setLang('ar');
+  </script>
+</body>
+</html>

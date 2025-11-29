@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تعريف بالشركة - Maison Des Nobles</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-image: url('images/nobles-bg.JPEG');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      height: 60px;
+      vertical-align: middle;
+    }
+    .site-header,
+    .site-footer,
+    .about-text,
+    .social-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .lang-switch button,
+    .lang-switch a {
+      margin-left: 10px;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lang-switch .active {
+      background: gold;
+      color: #000;
+    }
+    .contact-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .contact-links li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo.PNG" alt="Maison Des Nobles Logo" class="logo-img" />
+        <h1>Maison Des Nobles Fragrances</h1>
+      </div>
+      <nav class="lang-switch">
+        <button data-lang="ar" class="active">العربية</button>
+        <button data-lang="fr">Français</button>
+        <button data-lang="en">English</button>
+        <a href="index.html" class="back">العودة</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container about-page">
+    <h2 data-title-ar>تعريف بالشركة</h2>
+    <h2 data-title-fr style="display:none">Présentation de l'entreprise</h2>
+    <h2 data-title-en style="display:none">Company Overview</h2>
+
+    <div class="about-text">
+      <p class="desc-ar">
+        Maison Des Nobles Fragrances هي علامة مغربية فاخرة تأسست بشغف لتقديم تجربة عطرية راقية تمزج بين الأصالة والحداثة. نؤمن بأن العطر ليس مجرد منتج، بل هو تعبير عن الهوية والثقافة، ولهذا نحرص على اختيار عطور أصلية بعناية فائقة لتلائم ذوق عملائنا النبيل.
+      </p>
+      <p class="desc-fr" style="display:none">
+        Maison Des Nobles Fragrances est une maison marocaine de parfums de luxe fondée avec passion pour offrir une expérience olfactive raffinée alliant authenticité et modernité. Nous croyons que le parfum est une expression de l'identité et de la culture, c’est pourquoi nous sélectionnons nos fragrances avec le plus grand soin.
+      </p>
+      <p class="desc-en" style="display:none">
+        Maison Des Nobles Fragrances is a Moroccan luxury perfume house founded with passion to deliver a refined olfactory experience that blends authenticity and modernity. We believe fragrance is an expression of identity and culture, which is why we carefully select original scents to match our clients’ noble taste.
+      </p>
+    </div>
+
+    <div class="social-section">
+      <h3 data-social-ar>تابعنا على وسائل التواصل</h3>
+      <h3 data-social-fr style="display:none">Suivez-nous sur les réseaux sociaux</h3>
+      <h3 data-social-en style="display:none">Follow us on social media</h3>
+
+      <ul class="contact-links">
+        <li><a href="https://wa.me/212768997900" target="_blank">📱 WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/maisondesnobles1" target="_blank">📸 Instagram</a></li>
+        <li><a href="https://www.facebook.com/share/17nBSpJ2C8" target="_blank">📘 Facebook</a></li>
+        <li><a href="https://www.tiktok.com/@maison.des_nobles" target="_blank">🎵 TikTok</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Maison Des Nobles Fragrances</p>
+    </div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-switch button');
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-title-ar]').forEach(e => e.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-title-fr]').forEach(e => e.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-title-en]').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
+      document.querySelectorAll('.desc-ar').forEach(e => e.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('.desc-fr').forEach(e => e.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('.desc-en').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
+      document.querySelectorAll('[data-social-ar]').forEach(e => e.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-social-fr]').forEach(e => e.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-social-en]').forEach(e => e.style.display = (lang==='en') ? '' : 'none');
+      buttons.forEach(b => b.classList.remove('active'));
+      document.querySelector('.lang-switch button[data-lang="'+lang+'"]').classList.add('active');
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    setLang('ar');
+  </script>
+</body>
+</html>
