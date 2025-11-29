@@ -1,103 +1,87 @@
 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Des Nobles Fragrances</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="lang-switch">
-    <button onclick="setLang('ar')">العربية</button>
-    <button onclick="setLang('fr')">FR</button>
-    <button onclick="setLang('en')">EN</button>
-</div>
-
-<header>
-    <h1 data-ar="Maison Des Nobles Fragrances"
-        data-fr="Maison Des Nobles Fragrances"
-        data-en="Maison Des Nobles Fragrances">Maison Des Nobles Fragrances</h1>
-
-    <p class="slogan"
-        data-ar="عطور فاخرة… تعكس النُبل في كل نفحة"
-        data-fr="Des parfums nobles et raffinés"
-        data-en="Noble and refined fragrances">عطور فاخرة… تعكس النُبل في كل نفحة</p>
-
-    <a href="#products" class="btn"
-        data-ar="تصفح العطور"
-        data-fr="Voir les parfums"
-        data-en="Browse Fragrances">تصفح العطور</a>
-</header>
-
-<section class="about">
-    <h2 data-ar="من نحن" data-fr="À propos" data-en="About Us">من نحن</h2>
-
-    <p data-ar="Maison Des Nobles Fragrances هي علامة فاخرة تهتم بتقديم أجود العطور المختارة بعناية، سواء العالمية أو التركيبات الخاصة التي تعكس الرقي والجودة."
-       data-fr="Maison Des Nobles Fragrances est une marque de luxe spécialisée dans des parfums soigneusement sélectionnés, qu'ils soient internationaux ou des créations exclusives."
-       data-en="Maison Des Nobles Fragrances is a luxury brand offering carefully selected fragrances, from international perfumes to exclusive creations.">
-       Maison Des Nobles Fragrances هي علامة فاخرة…</p>
-</section>
-
-<section id="products" class="products">
-    <h2 data-ar="منتجاتنا" data-fr="Nos Produits" data-en="Our Products">منتجاتنا</h2>
-
-    <div class="product-grid">
-
-        <div class="product">
-            <img src="images/placeholder.png">
-            <h3 data-ar="عطر رقم 1" data-fr="Parfum N°1" data-en="Fragrance No.1">عطر رقم 1</h3>
-            <p data-ar="رائحة فاخرة تدوم طويلاً"
-               data-fr="Un parfum luxueux et durable"
-               data-en="A luxurious long-lasting scent">رائحة فاخرة تدوم طويلاً</p>
-        </div>
-
-        <div class="product">
-            <img src="images/placeholder.png">
-            <h3 data-ar="عطر رقم 2" data-fr="Parfum N°2" data-en="Fragrance No.2">عطر رقم 2</h3>
-            <p data-ar="مزيج راقٍ من النفحات الشرقية والغربية"
-               data-fr="Un mélange élégant d’essences orientales et occidentales"
-               data-en="A refined blend of oriental and western notes">مزيج راقٍ…</p>
-        </div>
-
-        <div class="product">
-            <img src="images/placeholder.png">
-            <h3 data-ar="عطر رقم 3" data-fr="Parfum N°3" data-en="Fragrance No.3">عطر رقم 3</h3>
-            <p data-ar="ثبات عالي ولمسة فنية"
-               data-fr="Tenue longue et touche artistique"
-               data-en="High longevity with an artistic touch">ثبات عالي…</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact">
-    <h2 data-ar="تواصل معنا" data-fr="Contact" data-en="Contact Us">تواصل معنا</h2>
-
-    <p data-ar="للطلبات والاستفسارات راسلونا عبر واتساب"
-       data-fr="Pour les commandes ou questions, contactez-nous sur WhatsApp"
-       data-en="For orders or inquiries, contact us via WhatsApp">للطلبات والاستفسارات…</p>
-
-    <a class="btn" href="https://wa.me/212768997900"
-       data-ar="راسلنا على واتساب"
-       data-fr="Contact WhatsApp"
-       data-en="Contact on WhatsApp">راسلنا على واتساب</a>
-</section>
-
-<footer>
-    <p>© 2025 Maison Des Nobles Fragrances</p>
-</footer>
-
-<script>
-function setLang(lang) {
-    document.querySelectorAll("[data-" + lang + "]").forEach(el => {
-        el.innerHTML = el.getAttribute("data-" + lang);
-    });
-    document.body.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+<meta charset="UTF-8">
+<title>Maison Des Nobles Fragrances</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1c1c1c, #434343);
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
-</script>
-
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0,0,0,0.7);
+}
+h1 {
+    color: gold;
+    font-size: 3em;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid gold;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.card h2 {
+    color: gold;
+    font-size: 1.2em;
+}
+.card p {
+    color: #f5f5f5;
+    font-size: 1em;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Maison Des Nobles Fragrances 🛍️✨</h1>
+<p>اختيار فاخر من العطور الراقية</p>
+</header>
+<div class="container">
+<div class="card">
+<img src="https://via.placeholder.com/200x200.png?text=Stronger+with+You+Intensely" alt="Stronger with You Intensely">
+<h2>Stronger with You Intensely</h2>
+<p>299 MAD</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/200x200.png?text=Valentino+Uomo+Intense" alt="Valentino Uomo Intense">
+<h2>Valentino Uomo Intense</h2>
+<p>280 MAD</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/200x200.png?text=My+Way+Giorgio+Armani" alt="My Way Giorgio Armani">
+<h2>My Way Giorgio Armani</h2>
+<p>280 MAD</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/200x200.png?text=Jean+Paul+Gautier+Le+Male+Elixir" alt="Jean Paul Gautier Le Male Elixir">
+<h2>Jean Paul Gautier Le Male Elixir</h2>
+<p>280 MAD</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/200x200.png?text=Burberry+Her+Eau+de+Parfum+Intense" alt="Burberry Her Eau de Parfum Intense">
+<h2>Burberry Her Eau de Parfum Intense</h2>
+<p>280 MAD</p>
+</div>
+</div>
 </body>
 </html>
