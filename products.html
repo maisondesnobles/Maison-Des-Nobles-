@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Des Nobles - Products</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('images/nobles-bg.JPEG');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+    .header, .footer {
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      text-align: center;
+    }
+    .logo-img {
+      height: 60px;
+      vertical-align: middle;
+    }
+    .lang-switch button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-switch .active {
+      background-color: gold;
+      color: black;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .product {
+      background-color: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .price {
+      color: gold;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: gold;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .desc, .btn, .link {
+      display: none;
+    }
+    .visible {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="images/logo.PNG" alt="Logo" class="logo-img" />
+    <h1>Maison Des Nobles Fragrances</h1>
+    <div class="lang-switch">
+      <button onclick="setLang('ar')" id="btn-ar" class="active">العربية</button>
+      <button onclick="setLang('fr')" id="btn-fr">Français</button>
+      <button onclick="setLang('en')" id="btn-en">English</button>
+    </div>
+    <div>
+      <a href="company.html" class="link ar visible">عن الشركة</a>
+      <a href="company.html" class="link fr">À propos</a>
+      <a href="company.html" class="link en">About</a> |
+      <a href="index.html" class="link ar visible">العودة</a>
+      <a href="index.html" class="link fr">Retour</a>
+      <a href="index.html" class="link en">Back</a>
+    </div>
+  </div>
+
+  <div class="products">
+    <!-- Stronger -->
+    <div class="product">
+      <img src="images/stronger.JPEG" alt="Stronger With You Intensely" />
+      <h3>Stronger With You Intensely</h3>
+      <p class="price">299 MAD</p>
+      <p class="desc ar visible">عطر رجالي فاخر بنفحات العنبر والفانيليا والتوابل الشرقية.</p>
+      <p class="desc fr">Parfum masculin intense aux notes d’ambre, vanille et épices orientales.</p>
+      <p class="desc en">Intense masculine fragrance with amber, vanilla and oriental spices.</p>
+      <a class="btn ar visible" href="https://wa.me/p/24343900011951068/212768997900">اطلب عبر واتساب</a>
+      <a class="btn fr" href="https://wa.me/p/24343900011951068/212768997900">Commander via WhatsApp</a>
+      <a class="btn en" href="https://wa.me/p/24343900011951068/212768997900">Order via WhatsApp</a>
+    </div>
+
+    <!-- Valentino -->
+    <div class="product">
+      <img src="images/valentino.JPEG" alt="Valentino Uomo Intense" />
+      <h3>Valentino Uomo Intense</h3>
+      <p class="price">280 MAD</p>
+      <p class="desc ar visible">عطر رجالي أنيق برائحة الجلد والفانيليا والمسك.</p>
+      <p class="desc fr">Parfum élégant au cuir, vanille et musc.</p>
+      <p class="desc en">Elegant fragrance with leather, vanilla and musk.</p>
+      <a class="btn ar visible" href="https://wa.me/p/10041473525977873/212768997900">اطلب عبر واتساب</a>
+      <a class="btn fr" href="https://wa.me/p/10041473525977873/212768997900">Commander via WhatsApp</a>
+      <a class="btn en" href="https://wa.me/p/10041473525977873/212768997900">Order via WhatsApp</a>
+    </div>
+
+    <!-- My Way -->
+    <div class="product">
+      <img src="images/myway.JPEG" alt="My Way Giorgio Armani" />
+      <h3>My Way Giorgio Armani</h3>
+      <p class="price">280 MAD</p>
+      <p class="desc ar visible">عطر نسائي ناعم بنفحات الياسمين وزهر البرتقال والفانيليا.</p>
+      <p class="desc fr">Parfum féminin doux au jasmin, fleur d’oranger et vanille.</p>
+      <p class="desc en">Soft feminine fragrance with jasmine, orange blossom and vanilla.</p>
+      <a class="btn ar visible" href="https://wa.me/p/25069120472739144/212768997900">اطلب عبر واتساب</a>
+      <a class="btn fr" href="https://wa.me/p/25069120472739144/212768997900">Commander via WhatsApp</a>
+      <a class="btn en" href="https://wa.me/p/25069120472739144/212768997900">Order via WhatsApp</a>
+    </div>
+
+    <!-- Le Male -->
+    <div class="product">
+      <img src="images/le_male.JPEG" alt="Jean Paul Gaultier Le Male Elixir" />
+      <h3>Jean Paul Gaultier Le Male Elixir</h3>
+      <p class="price">280 MAD</p>
+      <p class="desc ar visible">عطر رجالي قوي بنفحات التونكا واللافندر والعنبر.</p>
+      <p class="desc fr">Parfum puissant à la fève tonka, lavande et ambre.</p>
+      <p class="desc en">Powerful fragrance with tonka bean, lavender and amber.</p>
+      <a class="btn ar visible" href="https://wa.me/p/25162055783462084/212768997900">اطلب عبر واتساب</a>
+      <a class="btn fr" href="https://wa.me/p/25162055783462084/212768997900">Commander via WhatsApp</a>
+      <a class="btn en" href="https://wa.me/p/25162055783462084/212768997900">Order via WhatsApp</a>
+    </div>
+
+    <!-- Burberry Her -->
+    <div class="product">
+      <img src="images/burberry.JPEG" alt="Burberry Her Eau de Parfum Intense" />
+      <h3>Burberry Her Eau de Parfum Intense</h3>
+      <p class="price">280 MAD</p>
+      <p class="desc ar visible">عطر نسائي فاكهي زهري بنفحات التوت والياسمين والمسك.</p>
+      <p class="desc fr">Parfum fruité floral aux notes de baies, jasmin et musc.</p>
+      <p class="desc en">Fruity floral fragrance with berries, jasmine and musk.</p>
+      <a class="btn ar visible" href="https://wa.me/p/24925469347152501/212768997900">اطلب عبر واتساب</a>
+      <a class="btn fr" href="https://wa.me/p/25162055783462084/212768997900">Commander via WhatsApp</a>
+      <a class="btn en" href="https://wa.me/p/25162055783462084/212768997900">Order via WhatsApp</a>
+    </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Maison Des Nobles Fragrances</p>
+    </div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-switch button');
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-link-ar]').forEach(el => el.style.display = (lang==='ar') ? '' : 'none');
+      document.querySelectorAll('[data-link-fr]').forEach(el => el.style.display = (lang==='fr') ? '' : 'none');
+      document.querySelectorAll('[data-link-en]').forEach(el => el.style.display = (lang==='en') ? '' : 'none');
+      buttons.forEach(b => b.classList.remove('active'));
+      document.querySelector('.lang-switch button[data-lang="'+lang+'"]').classList.add('active');
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    setLang('ar');
+  </script>
+</body>
+</htmls>
